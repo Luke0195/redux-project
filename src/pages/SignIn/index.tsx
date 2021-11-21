@@ -1,9 +1,11 @@
-import React from 'react';
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { StoreState } from '../../store/createStore'
 import image from '../../assets/img/redux.jpg'
 import './styles.css'
 
-export function SignIn(){
-  return(
+export function SignIn () {
+  return (
     <div className="form-container">
     <img src={image} alt="redux logo"/>
     <form>
