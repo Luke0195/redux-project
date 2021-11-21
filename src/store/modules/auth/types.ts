@@ -8,4 +8,5 @@ export interface AuthState {
   readonly loadingSignIn: boolean
   readonly isSignedIn: boolean
   readonly token: string | null
+  readonly error: boolean
 }
