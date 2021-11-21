@@ -8,9 +8,6 @@ import './styles.css'
 export function SignIn () {
   const dispatch = useDispatch()
   const { loadingSignIn, error, isSignedIn } = useSelector((state: StoreState) => state.auth)
-  console.log('LOADING SIGNED IN:', loadingSignIn)
-  console.log('Error', error)
-  console.log('isSignedIn', isSignedIn)
 
   return (
     <div className="form-container">
