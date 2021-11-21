@@ -4,6 +4,18 @@ interface SignInRequestData{
   password: string
 }
 
-export function signRequest ({ email, password }: SignInRequestData) {
+interface SignInSucessData{
+  token: string
+}
+
+export function signInRequest ({ email, password }: SignInRequestData) {
   return action('@auth/SIGN_IN_REQUEST', { email, password })
+}
+
+export function signInSucess ({ token }: SignInSucessData) {
+  return action('@auth/SIGN_IN_SUCESS', { token })
+}
+
+export function signInFailure () {
+  return action('@auth/SIGN_IN_FAILURE')
 }

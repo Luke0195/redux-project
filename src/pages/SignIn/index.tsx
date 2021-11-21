@@ -7,8 +7,8 @@ import './styles.css'
 
 export function SignIn () {
   const dispatch = useDispatch()
-  const { loadignSignIn } = useSelector((state: StoreState) => state.auth)
-  console.log('LOADING SIGNED IN:', loadignSignIn)
+  const { loadingSignIn } = useSelector((state: StoreState) => state.auth)
+  console.log('LOADING SIGNED IN:', loadingSignIn)
 
   return (
     <div className="form-container">
@@ -16,7 +16,7 @@ export function SignIn () {
     <div className="form">
       <input type="text" placeholder="Email" defaultValue="lucas@1273@gmail.com"/>
       <input type="password" placeholder="Senha" defaultValue="213"/>
-      <button onClick={() => dispatch(actions.signRequest({ email: 'lucas@1273@gmail.com', password: '213' }))}> {loadignSignIn ? 'Carregando' : 'Entrar'}</button>
+      <button onClick={() => dispatch(actions.signInRequest({ email: 'lucas@1273@gmail.com', password: '213' }))}> {loadingSignIn ? 'Carregando' : 'Entrar'}</button>
     </div>
   </div>
   )
